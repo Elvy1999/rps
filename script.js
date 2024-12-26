@@ -20,7 +20,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 let playRound = (computerChoice, userChoice) => {
-  userChoice = userChoice.toLowercase();
+  userChoice = userChoice.toLowerCase();
   if (userChoice == computerChoice) {
     console.log("It's a tie!");
   }
@@ -57,3 +57,32 @@ let playGame = () => {
   if (humanScore == 5) console.log("You have won 5 games");
   else console.log("The computer has one 5 games");
 };
+
+const container = document.querySelector("#container");
+const pTag = document.createElement("p");
+pTag.innerHTML = "I am red";
+pTag.style.color = "red";
+container.appendChild(pTag);
+const h3 = document.createElement("h3");
+h3.innerHTML = "I'm a blue h3";
+h3.style.color = "blue";
+container.appendChild(h3);
+const div = document.createElement("div");
+div.style.border = "black 2px solid";
+div.style.background = "pink";
+container.appendChild(div);
+const nestedH1 = document.createElement("h1");
+nestedH1.innerHTML = "I'm in a div";
+const nestedP = document.createElement("p");
+nestedP.innerHTML = "ME TOO";
+div.appendChild(nestedH1);
+div.appendChild(nestedP);
+const button = document.createElement("button");
+button.style.border = "red 4px solid";
+button.innerHTML = "Click me";
+container.appendChild(button);
+button.id = "btn";
+let btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  console.log("I have been clicked");
+});
