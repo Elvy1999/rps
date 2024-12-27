@@ -57,7 +57,7 @@ buttons.forEach((button) => {
   addEventListener("click", (e) => {
     let userChoice = e.target.id;
     playRound(getComputerChoice(), userChoice);
-    if (humanScore == 5) result.innerHTML = "Player has one a total of 5 games!";
+    if (humanScore == 5) result.innerHTML = "Player has won a total of 5 games!";
     else if (computerScore == 5) result.innerHTML = "Computer has one a total of 5 games!";
   });
 });
